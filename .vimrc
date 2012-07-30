@@ -92,9 +92,11 @@ if has("autocmd")
 	" Enable file type detection
 	filetype on
     filetype plugin on
-	" Treat .json files as .js
-	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+    " Treat .json files as .js
+    autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+    " CSS tabbing "
     autocmd FileType css setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+    " Python tabs and only highlight specified keywords "
     autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8
             \ formatoptions+=croq softtabstop=4 smartindent
             \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
