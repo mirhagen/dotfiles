@@ -91,6 +91,14 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 if has("autocmd")
 	" Enable file type detection
 	filetype on
+    filetype plugin on
 	" Treat .json files as .js
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+    autocmd FileType css setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+    autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8
+            \ formatoptions+=croq softtabstop=4 smartindent
+            \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+    let python_highlight_all=1
+    let python_highlight_exceptions=0
+    let python_highlight_builtins=0
 endif
