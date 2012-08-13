@@ -21,11 +21,11 @@
 	credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
 	# Undo a `git push`
 	undopush = push -f origin HEAD^:master
-    st = status
-    ci = commit
-    co = checkout
-    br = branch
-    uncommit = reset HEAD^
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	uncommit = reset HEAD^
 
 [apply]
 	# Detect whitespace errors when applying a patch
