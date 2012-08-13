@@ -54,3 +54,8 @@ if [ `id -u` != '0' ]; then
     fi
 fi
 
+# Prevent shell exit with CTRL-d
+export IGNOREEOF=1
+
+# Use colors for grep and use bright green instead of default red
+export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
